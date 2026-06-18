@@ -52,7 +52,7 @@ Railway's dashboard has a built-in AI agent for deployment diagnosis. Here's how
 | 💰 **Cost** | **Pay-per-token** (Anthropic rates) | **Free, unlimited** |
 | 🔑 **API Key** | Railway account required | **Not needed** |
 | 📍 **Where it works** | Only in Railway dashboard | **In your local AI agent (OpenCode, Claude Code, Cursor)** |
-| 🔌 **Internet required** | ✅ Yes | **❌ No — works fully offline** |
+| 🔌 **Internet required** | ✅ Yes (dashboard + cloud LLM) | **Depends on your AI model (local = offline, cloud = online)** |
 | 🎯 **Patterns covered** | Generic LLM diagnosis | **8 specific Railway patterns** |
 | ⚡ **Response time** | Depends on LLM API | **Instant — local CLI** |
 | 🔄 **Auto-fix** | Opens GitHub PR | **Edits config files directly + sets env vars** |
