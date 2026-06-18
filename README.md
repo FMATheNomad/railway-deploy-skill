@@ -2,38 +2,57 @@
 
 # 🚂 Railway Deploy Skill
 
-### *Autonomous deployment diagnosis & fix for AI coding agents*
+### *Stop guessing why your Railway deploy failed. Let your AI agent diagnose & fix it automatically in seconds.*
 
 [![GitHub Release](https://img.shields.io/github/v/release/FMATheNomad/railway-deploy-skill?style=for-the-badge&logo=github&color=blue)](https://github.com/FMATheNomad/railway-deploy-skill/releases)
 [![GitHub Stars](https://img.shields.io/github/stars/FMATheNomad/railway-deploy-skill?style=for-the-badge&logo=github&color=yellow)](https://github.com/FMATheNomad/railway-deploy-skill/stargazers)
-[![GitHub License](https://img.shields.io/github/license/FMATheNomad/railway-deploy-skill?style=for-the-badge&color=green)](LICENSE)
+[![GitHub Sponsors](https://img.shields.io/badge/Sponsor-%E2%9D%A4%EF%B8%8F-30363D?style=for-the-badge&logo=githubsponsors)](https://github.com/sponsors/FMATheNomad)
+[![GitHub License](https://img.shields.io/badge/License-MIT-green?style=for-the-badge)](LICENSE)
 [![OpenCode](https://img.shields.io/badge/OpenCode-Skill-6C47FF?style=for-the-badge&logo=opencode)](https://opencode.ai)
 [![Railway](https://img.shields.io/badge/Railway-Deploy-7B36ED?style=for-the-badge&logo=railway)](https://railway.app)
-[![PRs Welcome](https://img.shields.io/badge/PRs-Welcome-brightgreen?style=for-the-badge)](CONTRIBUTING.md)
-[![Buy Me a Coffee](https://img.shields.io/badge/Sponsor-FMA%20Software%20Labs-FF6B6B?style=for-the-badge&logo=githubsponsors)](https://github.com/sponsors/FMATheNomad)
-
-**[Install](#-installation) • [Usage](#-usage) • [Patterns](#-diagnosed-patterns) • [Contributing](CONTRIBUTING.md) • [Sponsor](https://github.com/sponsors/FMATheNomad)**
 
 ---
 
-> **Stop guessing why your Railway deploy failed. Let your AI agent diagnose & fix it automatically.**
+# ⭐️ Support This Project ⭐️
 
-Railway Deploy Skill is an [OpenCode](https://opencode.ai) / [Claude Code](https://claude.ai/code) **agent skill** that autonomously diagnoses and fixes Railway deployment crashes for **FastAPI + Next.js + PostgreSQL** stacks. When your deploy fails, your agent instantly collects logs, matches the error against known patterns, and applies the fix — no context switching, no manual debugging.
+**This is a free, open-source skill built by a solo founder. If it saves you from one more deploy-crash-debug cycle, please:**
+
+[![Star](https://img.shields.io/badge/⭐️_Star_this_repo-Support_the_project-yellow?style=for-the-badge)](https://github.com/FMATheNomad/railway-deploy-skill/stargazers)
+[![Sponsor](https://img.shields.io/badge/%E2%9D%A4%EF%B8%8F_Sponsor_on_GitHub-Support_the_creator-30363D?style=for-the-badge&logo=githubsponsors)](https://github.com/sponsors/FMATheNomad)
+
+**Every star & sponsor helps a solo founder keep building free tools for the community.** 🙏
+
+---
+
+> **Stop wasting hours debugging Railway deploys.** This skill gives your AI agent the power to autonomously diagnose and fix Railway deployment crashes — OOM kills, healthcheck failures, database connection errors, and more. One command → agent collects logs, analyzes configs, matches patterns, and applies the fix.
+
+Railway Deploy Skill is an [OpenCode](https://opencode.ai) / [Claude Code](https://claude.ai/code) **agent skill** that supports **FastAPI + Next.js + PostgreSQL** stacks. All CLI commands verified against official `railway --help`.
 
 </div>
 
 ---
 
+## 🆚 Why Not Just Debug Manually?
+
+| Feature | Manual Debugging | **Railway Deploy Skill** |
+|---------|-----------------|--------------------------|
+| ⏱ **Time to fix** | 30 min — 3 hours | **30 seconds** |
+| 🔍 **Log analysis** | You scroll through logs | **Agent reads & matches patterns** |
+| 📚 **Config checking** | You check each file manually | **Agent reads all files automatically** |
+| 🧠 **Pattern recall** | You remember past errors | **8 pre-built patterns** |
+| ✅ **CLI accuracy** | You might use wrong flags | **Verified against `railway --help`** |
+| 🔓 **Cost** | Your billable time | **Free, MIT licensed** |
+
 ## ✨ Features
 
 | Feature | Description |
 |---------|-------------|
-| **🤖 Fully Autonomous** | Agent collects logs, checks env vars, reads configs — no manual input needed |
-| **🔍 8 Failure Patterns** | From OOM kills to healthcheck timeouts, all covered |
+| **🤖 Fully Autonomous** | Agent collects logs, checks env vars, reads configs — no manual input |
+| **🔍 8 Failure Patterns** | From OOM kills to healthcheck timeouts |
 | **⚡ One-Command Fix** | Say "deploy crash" — agent handles the rest |
-| **🛠 Stack-Specific** | Optimized for FastAPI, Next.js, PostgreSQL, Docker, Railpack |
+| **🛠 Stack-Specific** | FastAPI, Next.js, PostgreSQL, Docker, Railpack |
 | **📚 CLI-Accurate** | All Railway CLI commands verified against official `railway --help` |
-| **🔓 Open Source** | MIT licensed. Free forever. |
+| **🔓 Open Source** | MIT licensed. Free forever. Built by a solo founder. |
 
 ## 🚂 Diagnosed Patterns
 
@@ -164,23 +183,6 @@ railway service status                # Check service health
 railway connect postgres              # Open psql shell
 ```
 
-## 📁 Project Structure
-
-```
-railway-deploy-skill/
-├── .github/
-│   ├── workflows/
-│   │   └── validate.yml       # CI: validates SKILL.md
-│   └── FUNDING.yml            # GitHub Sponsors config
-├── skills/
-│   └── railway-deploy/
-│       └── SKILL.md           # 🧠 The skill (agent instructions)
-├── README.md                  # 📖 This file
-├── CONTRIBUTING.md            # 🤝 Contribution guide
-├── LICENSE                    # 📄 MIT License
-└── .gitignore
-```
-
 ## 🗺 Roadmap
 
 - [ ] **Pattern I: Docker build fails** — native module compilation errors
@@ -195,15 +197,6 @@ railway-deploy-skill/
 
 Found a missing pattern? See [CONTRIBUTING.md](CONTRIBUTING.md) for how to add it.
 
-## 💖 Support
-
-If this skill saves you time, consider:
-
-- ⭐ **Starring** the repo
-- 🐛 **Reporting** issues
-- 🔧 **Submitting** PRs
-- ☕ **Sponsoring** via [GitHub Sponsors](https://github.com/sponsors/FMATheNomad)
-
 ## 📚 References
 
 - [Railway Documentation](https://docs.railway.app)
@@ -213,16 +206,23 @@ If this skill saves you time, consider:
 - [OpenCode Skills](https://opencode.ai/docs/skills)
 - [skills.sh](https://skills.sh)
 
-## 📄 License
-
-MIT © [FMA Software Labs](https://fmasoftwarelabs.up.railway.app)
+---
 
 <div align="center">
 
+## ⭐️ Support the Project ⭐️
+
+**Built by a solo founder who got tired of debugging Railway deploys manually.**  
+If this skill saves you time, please support it — every bit counts:
+
+[![Star](https://img.shields.io/badge/⭐️_Star_this_Repo-1_click-yellow?style=for-the-badge)](https://github.com/FMATheNomad/railway-deploy-skill/stargazers)
+[![Sponsor](https://img.shields.io/badge/%E2%9D%A4%EF%B8%8F_Sponsor_on_GitHub-Support_a_solo_founder-30363D?style=for-the-badge&logo=githubsponsors)](https://github.com/sponsors/FMATheNomad)
+[![Share](https://img.shields.io/badge/🐦_Share_on_X-Tell_the_world-000000?style=for-the-badge&logo=x)](https://x.com/intent/tweet?text=🚂%20Stop%20guessing%20why%20your%20@Railway%20deploy%20failed.%20Let%20your%20AI%20agent%20diagnose%20%26%20fix%20it%20automatically.%20OOM%2C%20healthcheck%2C%20DB%20errors%20%E2%80%94%20all%20covered.%20Free%20%26%20open%20source.%20%F0%9F%94%AC&url=https://github.com/FMATheNomad/railway-deploy-skill)
+
 ---
 
-**Built by a solo founder, for solo founders.**  
-*Ship faster. Crash less. Deploy with confidence.*
+*Ship faster. Crash less. Deploy with confidence.*  
+*Free for everyone. MIT licensed.*
 
 [![FMA Software Labs](https://img.shields.io/badge/FMA%20Software%20Labs-000000?style=for-the-badge&logo=github)](https://fmasoftwarelabs.up.railway.app)
 [![X / Twitter](https://img.shields.io/badge/Follow-%40fmathenomad-000000?style=for-the-badge&logo=x)](https://x.com/fmathenomad)
