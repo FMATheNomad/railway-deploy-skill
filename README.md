@@ -91,7 +91,7 @@ Railway's dashboard has a built-in AI agent for deployment diagnosis. Here's how
 
 ## 📦 Installation
 
-### One-Liner (Semua Agent — Recommended)
+### One-Liner (All Agents — Recommended)
 
 ```bash
 curl -fsSL https://raw.githubusercontent.com/FMATheNomad/railway-deploy-skill/main/skills/railway-deploy/SKILL.md \
@@ -126,14 +126,14 @@ curl -fsSL https://raw.githubusercontent.com/FMATheNomad/railway-deploy-skill/ma
 
 Start a session with your AI agent and say:
 
-> *"Railway deploy saya crash, diagnosa pakai railway-deploy skill"*
+> *"Railway deploy crash, diagnose using railway-deploy skill"*
 
 Or be more specific:
 
-> *"Build gagal dengan exit code 137 — cek memory issue"*
-> *"Auto-deploy error setelah git push"*
-> *"FastAPI app deploy sukses tapi healthcheck gagal"*
-> *"Database connection refused setelah deploy"*
+> *"Build failed with exit code 137 — check memory issue"*
+> *"Auto-deploy error after git push"*
+> *"FastAPI app deploy succeeds but healthcheck fails"*
+> *"Database connection refused after deploy"*
 
 ### What Happens Automatically
 

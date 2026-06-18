@@ -1,6 +1,6 @@
 ---
 name: railway-deploy
-description: Autonomously diagnose and fix Railway deployment failures for FastAPI + Next.js + PostgreSQL projects. Use this skill when the user encounters deployment crashes, failed builds, auto-deploy failures, health check errors, or any Railway deployment issue. Also use when the user says "deploy gagal", "crash di railway", "build failed", "auto-deploy error", "deployment timeout", or "app not responding after deploy".
+description: Autonomously diagnose and fix Railway deployment failures for FastAPI + Next.js + PostgreSQL projects. Use this skill when the user encounters deployment crashes, failed builds, auto-deploy failures, health check errors, or any Railway deployment issue. Also use when the user says "deploy failed", "crash on railway", "build failed", "auto-deploy error", "deployment timeout", or "app not responding after deploy".
 compatibility: opencode
 metadata:
   author: custom
@@ -69,11 +69,11 @@ node .next/standalone/server.js
 uvicorn main:app --host 0.0.0.0 --port $PORT
 ```
 
-**With Dockerfile** — Start command di Railway settings untuk Dockerfile service perlu shell wrapper:
+**With Dockerfile** — Start command in Railway settings for Dockerfile service needs shell wrapper:
 ```bash
 /bin/sh -c "exec uvicorn main:app --host 0.0.0.0 --port $PORT"
 ```
-**CMD di Dockerfile** bisa shell form langsung (otomatis lewat `/bin/sh -c`):
+**CMD in Dockerfile** can use shell form directly (automatically via `/bin/sh -c`):
 ```dockerfile
 CMD uvicorn main:app --host 0.0.0.0 --port $PORT
 ```
