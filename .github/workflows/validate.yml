@@ -1,0 +1,33 @@
+name: Validate SKILL.md
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Check SKILL.md exists
+        run: |
+          if [ ! -f skills/railway-deploy/SKILL.md ]; then
+            echo "SKILL.md not found!"
+            exit 1
+          fi
+          echo "✅ SKILL.md found"
+      - name: Validate YAML frontmatter
+        run: |
+          python3 -c "
+          import yaml
+          with open('skills/railway-deploy/SKILL.md') as f:
+              content = f.read()
+          parts = content.split('---', 2)
+          data = yaml.safe_load(parts[1])
+          assert data.get('name') == 'railway-deploy', 'Name mismatch'
+          assert data.get('description'), 'Description missing'
+          print('✅ Frontmatter valid')
+          print(f'  Name: {data[\"name\"]}')
+          print(f'  Stack: {data.get(\"metadata\", {}).get(\"stack\", \"N/A\")}')
+          "
