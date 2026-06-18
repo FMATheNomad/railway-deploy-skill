@@ -43,6 +43,28 @@ Railway Deploy Skill is an [OpenCode](https://opencode.ai) / [Claude Code](https
 | ✅ **CLI accuracy** | You might use wrong flags | **Verified against `railway --help`** |
 | 🔓 **Cost** | Your billable time | **Free, MIT licensed** |
 
+## 🆚 vs Railway Built-in AI Agent
+
+Railway's dashboard has a built-in AI agent for deployment diagnosis. Here's how they compare:
+
+| Feature | Railway AI Agent (Dashboard) | **Railway Deploy Skill (Ours)** |
+|---------|------------------------------|----------------------------------|
+| 💰 **Cost** | **Pay-per-token** (Anthropic rates) | **Free, unlimited** |
+| 🔑 **API Key** | Railway account required | **Not needed** |
+| 📍 **Where it works** | Only in Railway dashboard | **In your local AI agent (OpenCode, Claude Code, Cursor)** |
+| 🔌 **Internet required** | ✅ Yes | **❌ No — works fully offline** |
+| 🎯 **Patterns covered** | Generic LLM diagnosis | **8 specific Railway patterns** |
+| ⚡ **Response time** | Depends on LLM API | **Instant — local CLI** |
+| 🔄 **Auto-fix** | Opens GitHub PR | **Edits config files directly + sets env vars** |
+| 🧩 **Customizable** | ❌ No | **✅ Add your own patterns** |
+| 🔓 **Vendor lock-in** | Railway-only | **Works with any AI agent, any cloud** |
+| 🚫 **Usage limits** | ✅ Hitting limits is common | **❌ No limits, use infinitely** |
+| 📜 **License** | Proprietary | **MIT** |
+
+> **Bottom line:** Railway's dashboard AI agent is great for quick diagnosis when you're already in the dashboard — but it's **paid per-token, only works online, and can't be customized**. This skill is **free, works offline in your local AI agent, covers 8 specific Railway failure patterns, and you can add more**. Use both — dashboard agent for quick checks, this skill for deep, automated fixes without leaving your editor or hitting token limits.
+
+---
+
 ## ✨ Features
 
 | Feature | Description |
