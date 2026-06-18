@@ -91,26 +91,29 @@ Railway's dashboard has a built-in AI agent for deployment diagnosis. Here's how
 
 ## 📦 Installation
 
-### One-Click (Recommended)
+### One-Liner (Semua Agent — Recommended)
 
 ```bash
-npx skills add FMATheNomad/railway-deploy-skill@railway-deploy -g -y
+curl -fsSL https://raw.githubusercontent.com/FMATheNomad/railway-deploy-skill/main/skills/railway-deploy/SKILL.md \
+  -o ~/.agents/skills/railway-deploy/SKILL.md
 ```
 
-### Manual — OpenCode
+`~/.agents/skills/` is compatible with **OpenCode, Claude Code, Cursor, Codex, Windsurf, Cline**, and all tools that support the Agent Skills standard.
+
+### OpenCode
 
 ```bash
 mkdir -p ~/.config/opencode/skills/railway-deploy
-curl -o ~/.config/opencode/skills/railway-deploy/SKILL.md \
-  https://raw.githubusercontent.com/FMATheNomad/railway-deploy-skill/main/skills/railway-deploy/SKILL.md
+curl -fsSL https://raw.githubusercontent.com/FMATheNomad/railway-deploy-skill/main/skills/railway-deploy/SKILL.md \
+  -o ~/.config/opencode/skills/railway-deploy/SKILL.md
 ```
 
-### Manual — Claude Code / Cursor / Others
+### Claude Code
 
 ```bash
-mkdir -p ~/.agents/skills/railway-deploy
-curl -o ~/.agents/skills/railway-deploy/SKILL.md \
-  https://raw.githubusercontent.com/FMATheNomad/railway-deploy-skill/main/skills/railway-deploy/SKILL.md
+mkdir -p ~/.claude/skills/railway-deploy
+curl -fsSL https://raw.githubusercontent.com/FMATheNomad/railway-deploy-skill/main/skills/railway-deploy/SKILL.md \
+  -o ~/.claude/skills/railway-deploy/SKILL.md
 ```
 
 ### Prerequisites
