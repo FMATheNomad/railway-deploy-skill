@@ -10,6 +10,7 @@
 [![GitHub License](https://img.shields.io/badge/License-MIT-green?style=for-the-badge)](LICENSE)
 [![OpenCode](https://img.shields.io/badge/OpenCode-Skill-6C47FF?style=for-the-badge&logo=opencode)](https://opencode.ai)
 [![Railway](https://img.shields.io/badge/Railway-Deploy-7B36ED?style=for-the-badge&logo=railway)](https://railway.app)
+[![skills.sh](https://skills.sh/b/FMATheNomad/railway-deploy-skill)](https://skills.sh/FMATheNomad/railway-deploy-skill)
 
 ---
 
